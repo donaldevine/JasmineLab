@@ -15,7 +15,7 @@ var Converter = (function () {
 	        if (isNaN(num) == true) {
 	        	throw new Error("Not a number");
 	        }
-	        return Math.round(num * converterValue);
+	        return num * converterValue;
 	    }
 	}
 	

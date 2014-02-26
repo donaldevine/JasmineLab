@@ -7,4 +7,8 @@ describe ("My Converter", function() {
 
         expect (function() {Converter.convertFromImperialToMetric("hello")}).toThrow(new Error("Not a number"));
     })
+    it("should convert metric weight to imperial", function() {
+        expect (Converter.convertFromMetricToImperial(1)).toBe(2.2);
+
+    })
 })
