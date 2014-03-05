@@ -11,3 +11,15 @@ window._skel_config = {
 	  }
   };
 
+var calculateIt = function(){
+	var metric = document.getElementById('metricValue');
+	var imperal = document.getElementById('imperalValue');
+
+	if (null != metric.value && !isNaN(metric.value)) {
+		imperal.value = Converter.convertFromImperialToMetric(metric.value);
+	}else{
+		if (null != imperal.value && !isNaN(imperal.value)) {
+			metric.value = Converter.convertFromImperialToMetric(imperal.value);	
+		};
+	}
+};
