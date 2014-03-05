@@ -13,13 +13,13 @@ window._skel_config = {
 
 var calculateIt = function(){
 	var metric = document.getElementById('metricValue');
-	var imperal = document.getElementById('imperalValue');
+	var imperial = document.getElementById('imperialValue');
 
-	if (null != metric.value && !isNaN(metric.value)) {
-		imperal.value = Converter.convertFromImperialToMetric(metric.value);
+	if (null != metric.value && isNaN(metric.value) == false && metric.value.length > 0) {
+		imperial.value = Converter.convertFromMetricToImperial(metric.value);
 	}else{
-		if (null != imperal.value && !isNaN(imperal.value)) {
-			metric.value = Converter.convertFromImperialToMetric(imperal.value);	
+		if (null != imperial.value && isNaN(imperial.value) == false && imperial.value.length > 0) {
+			metric.value = Converter.convertFromImperialToMetric(imperial.value);	
 		};
 	}
 };

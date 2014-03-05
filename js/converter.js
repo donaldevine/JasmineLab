@@ -4,14 +4,15 @@ var Converter = (function () {
 
 	return{
 		convertFromImperialToMetric: function(weight) {
-	        var num = parseInt(weight);
+	        var num = parseFloat(weight);
 	        if (isNaN(num) == true) {
 	        	throw new Error("Not a number");
 	        }
-	        return Math.round(num / converterValue);
+	        //return Math.round(num / converterValue);
+	        return (num / converterValue);
 	    },
 	    convertFromMetricToImperial: function(weight) {
-	        var num = parseInt(weight);
+	        var num = parseFloat(weight);
 	        if (isNaN(num) == true) {
 	        	throw new Error("Not a number");
 	        }
