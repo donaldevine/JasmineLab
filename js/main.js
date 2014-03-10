@@ -14,12 +14,24 @@ window._skel_config = {
 var calculateIt = function(){
 	var metric = document.getElementById('metricValue');
 	var imperial = document.getElementById('imperialValue');
+	var result = document.getElementById('resultValue');
 
-	if (null != metric.value && isNaN(metric.value) == false && metric.value.length > 0) {
-		imperial.value = Converter.convertFromMetricToImperial(metric.value);
+	if (metric.value && !isNaN(metric.value) && metric.value.length > 0) {
+		result.innerHTML = Converter.convertFromMetricToImperial(metric.value) + ' lb';
 	}else{
-		if (null != imperial.value && isNaN(imperial.value) == false && imperial.value.length > 0) {
-			metric.value = Converter.convertFromImperialToMetric(imperial.value);	
+		if (imperial.value && !isNaN(imperial.value) && imperial.value.length > 0) {
+			result.innerHTML = Converter.convertFromImperialToMetric(imperial.value) + ' kg';	
 		};
 	}
 };
+
+var clearIt = function(){
+	var metric = document.getElementById('metricValue');
+	var imperial = document.getElementById('imperialValue');
+	var result = document.getElementById('resultValue');
+
+	metric.value = '';
+	imperial.value = '';
+	result.innerHTML = '';
+
+}

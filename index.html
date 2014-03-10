@@ -25,29 +25,35 @@
 				</div>
 			<!-- Hero -->
 				<section id="hero">
-					
-				<div class="row">
-					<section class="12u">
-						<h2>Metric/Imperial Converter</h2>
-					</section>
-				</div>
-				<div class="row">
-					<section class="6u">
-						<h2>Metric Value</h2>
-						<input id="metricValue" type="number" class="input"></input>
-						
-					</section>
-					<section class="6u">
-						<h2>Imperial Value</h2>
-						<input id="imperialValue" type="number" class="input"></input>
-					</section>
-				</div>
-				<div class="row">
-					<section class="12u">
-						<button id="calcButton" onclick="calculateIt();" class="button">Calculate</button>
-					</section>
-					
-				</div>
+					<div class="row">
+						<section class="12u">
+							<h2>Metric/Imperial Converter</h2>
+						</section>
+					</div>
+					<div class="row">
+						<section class="6u">
+							<h2>Metric Value</h2>
+						</section>
+						<section class="6u">
+							<h2>Imperial Value</h2>
+						</section>
+					</div>
+					<div class="row">
+						<section class="6u">
+							<input id="metricValue" type="number" class="input" onclick="clearIt();"></input>
+						</section>
+						<section class="6u">
+							<input id="imperialValue" type="number" class="input" onclick="clearIt();"></input>
+						</section>
+					</div>
+					<div class="row">
+						<section class="6u">
+							<div id="resultValue" class="resultValue"></div>
+						</section>
+						<section class="2u">
+							<button id="calcButton" onclick="calculateIt();" class="button">Calculate</button>
+						</section>
+					</div>
 				</section>
 			<!-- Features -->
 
